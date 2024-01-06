@@ -8,7 +8,7 @@ google_analytics_key:
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
-description: Jekyll template with example content for a not-for-profit organisation.
+description: Jekyll template with example con tent for a not-for-profit organisation.
 author:
   name:
   email:
