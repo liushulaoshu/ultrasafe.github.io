@@ -2,13 +2,13 @@
 # Site
 
 title: Cause Template
-baseurl: "ultrasafe.github.io" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://liushulaoshu.github.io/ultrasafe.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 google_analytics_key:
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
-description: Jekyll template with example con tent for a not-for-profit organisation.
+description: Jekyll template with example content for a not-for-profit organisation.
 author:
   name:
   email:
