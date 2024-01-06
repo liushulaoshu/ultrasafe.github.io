@@ -1,86 +1,109 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		{% seo %}
-
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
-		<link rel="stylesheet" href="{{ site.url }}/css/screen.css">
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		<link rel="icon" type="image/png" href="/favicon.png" sizes="32x32">
-
-		{% if jekyll.environment == 'production' and site.google_analytics_key != '' %}
-			<script>
-				window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-				ga('create', '{{ site.google_analytics_key }}', 'auto');
-				ga('send', 'pageview');
-			</script>
-			<script async src='https://www.google-analytics.com/analytics.js'></script>
-		{% endif %}
-	</head>
-	<body>
-		<nav>
-			<div class="container">
-				<a href="{{ site.url }}">{% include logo.html %}</a>
+---
+layout: default
+title: The Sheep Vote
+---
+<header>
+	<div class="container">
+		<div class="column">
+			<div>
+				<h1 class="editable">Give sheep the vote</h1>
+				<p class="editable">Sheep are the backbone of the economy yet they receive no compensation.</p>
+				<div class="button">
+					<a href="#donate">Donate Now</a>
+				</div>
 			</div>
-		</nav>
-		<div class="content">
-			{{ content }}
 		</div>
-		<footer>
-			<p class="editor-link" style="margin-bottom: 20px;"><a href="cloudcannon:collections/_data/company.yml" class="btn"><strong>&#9998;</strong> Update footer</a></p>
-			<div class="container">
-				<div class="about">
-					<p>{{ site.data.company.mission_statement }}</p>
-				</div>
+		<div class="column">
+			<img src="{{ site.url }}/images/sheep.jpg" alt="Sheep">
+		</div>
+	</div>
+</header>
 
-				<div class="contact">
-					<address>
-						<a href="https://www.google.com/maps/place/{{ site.data.company.address | url_encode }}">
-							{% include icons/footer.html icon="place" %} {{ site.data.company.address }}
-						</a>
-					</address>
-					<p class="email">
-						<a href="mailto:{{ site.data.company.email }}">
-							{% include icons/footer.html icon="email" %} {{ site.data.company.email }}
-						</a>
-					</p>
-					<p class="phone">
-						<a href="tel:{{ site.data.company.phone | replace: ' ', '-' }}">
-							{% include icons/footer.html icon="phone" %} {{ site.data.company.phone }}
-						</a>
-					</p>
-				</div>
+<div class="container">
+	<h2 class="editable" style="text-align: center;">Why sheep need the vote</h2>
 
-				<div class="sharing">
-					<a class="facebook" href="https://www.facebook.com/{{ site.data.company.facebook }}">
-						{% include icons/social-media.html social_icon="facebook" %}
-					</a>
-					<a class="twitter" href="https://twitter.com/{{ site.data.company.twitter }}">
-						{% include icons/social-media.html social_icon="twitter" %}
-					</a>
-					<a class="youtube" href="https://youtube.com/{{ site.data.company.youtube }}">
-						{% include icons/social-media.html social_icon="youtube" %}
-					</a>
+	<ul class="thirds">
+		<li>
+			<div class="image">{% include icons/site.html icon="population" %}</div>
+			<h3 class="editable">Population</h3>
+			<p class="editable">New Zealand has a human population of just 4.5M while there are 70M sheep. </p>
+		</li>
+
+		<li>
+			<div class="image">{% include icons/site.html icon="economy" %}</div>
+			<h3 class="editable">Economy</h3>
+			<p class="editable">Sheep are the backbone of the economy yet they receive no compensation.</p>
+		</li>
+
+		<li>
+			<div class="image">{% include icons/site.html icon="conditions" %}</div>
+			<h3 class="editable">Work Conditions</h3>
+			<p class="editable">Sheep are forced to eat grass every day of their life. How about some of variety?</p>
+		</li>
+	</ul>
+</div>
+
+<div class="container">
+	<div class="columns">
+		<div>
+			<img src="{{ site.url }}/images/sheep2.jpg" alt="Sheep">
+		</div>
+		<div>
+			<h2 class="editable">Our Mission</h2>
+
+			<p class="editable">Leave no sheep behind. Our mission to give sheep the right to vote and have them represented in parliament. For too long sheep have been exploited for their warm wool and delicious meat. It's time to put our hooves down and baa for what's right. Give sheep the vote!</p>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<hr>
+	<blockquote>
+		<p class="quote editable">The ultimate measure of a sheep is not where he stands in moments of comfort and convenience, but where he stands at times of challenge and controversy.</p>
+		<div class="attribute">
+			<p class="meta">
+				<span class="image"><img class="editable" src="{{ site.url }}/images/wooly.jpg" alt="Wooly"></span>
+				<span class="author editable"><strong>Wooly McBaa</strong></span>
+			</p>
+		</div>
+	</blockquote>
+</div>
+
+<div class="darker">
+	<div class="container">
+		<h2 class="editable">Join us</h2>
+		<p class="editable" style="text-align: center;">Sign up to hear the latest news and progress in our fight for the sheep vote.</p>
+		<form action="{{ site.newsletter_action }}" method="post">
+			<input type="text" name="EMAIL" placeholder="Email">
+			<input type="submit" value="Sign up"/>
+		</form>
+	</div>
+</div>
+
+<div class="container" id="donate">
+	<h2 class="editable">Make a donation</h2>
+	<div class="donate">
+		{{ site.donation_embed }}
+	</div>
+</div>
+
+<div class="darker">
+	<div class="container">
+		<h2 class="editable">Updates</h2>
+		<p class="editor-link"><a href="cloudcannon:collections/_posts" class="btn"><strong>&#9998;</strong> Add Update</a></p>
+		<div class="posts">
+			{% for post in site.posts %}
+			<div class="post">
+				<div class="image" style="background-image: url({{ post.featured_image}})"></div>
+				<div class="post-content">
+					<p class="date">{{ post.date | date: '%B %d, %Y' }}</p>
+					<h3>{{ post.title }}</h3>
+
+					{{ post.content }}
+					<p class="editor-link"><a href="cloudcannon:collections/{{ post.path }}" class="btn"><strong>&#9998;</strong> Edit Update</a></p>
 				</div>
 			</div>
-		</footer>
-		<p class="copyright">
-			<a href="https://cloudcannon.com/">
-				Template by CloudCannon
-			</a>
-		</p>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-		<script type="text/javascript">
-			$('a[href*=\\#]').on('click', function(event){
-				var el = $(this.hash);
-				if (el.length > 0) {
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
-				}
-			});
-		</script>
-	</body>
-</html>
+			{% endfor %}
+		</div>
+	</div>
+</div>
