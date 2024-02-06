@@ -4,7 +4,7 @@
 title: Cause Template
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://liushulaoshu.github.io/ultrasafe.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-google_analytics_key:
+google_analytics_key:	G-P4KPPESSV1
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /siteicon.png
@@ -22,15 +22,6 @@ social:
 # Build
 
 timezone: Etc/UTC
-
-collections:
-  staff_members:
-    _icon: account_circle
-    _hide_content: true
-    _options:
-      image:
-        width: 250
-        height: 250
 
 permalink: pretty
 
