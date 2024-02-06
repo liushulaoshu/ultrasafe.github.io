@@ -22,7 +22,14 @@ social:
 # Build
 
 timezone: Etc/UTC
-
+collections:
+  staff_members:
+    _icon: account_circle
+    _hide_content: true
+    _options:
+      image:
+        width: 250
+        height: 250
 permalink: pretty
 
 defaults:
